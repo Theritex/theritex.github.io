@@ -1,0 +1,36 @@
+<!--Glory to Theritex-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theritex - Redirection Site | About/title</title>
+    <link rel="stylesheet" href="styles/styles2.css">
+    <link rel="shortcut icon" href="media/images/icon.ico" type="image/x-icon">
+</head>
+<body>
+    <h1>About This Page</h1>
+    <button id="playButton" onclick="playAudio()"> </button>
+
+    <p>This page functions as a simple redirection service with a specific and limited purpose. Its primary functionality is to direct users to other destinations in a straightforward manner, offering no additional features or extensive content.</p>
+
+    <ul>
+        <li><b>License:</b> The page is subject to the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0). Users are allowed to share and adapt the content, provided it is for non-commercial purposes and proper attribution is given.</li>
+    </ul>
+
+    <audio id="aboutthispagesub" src="media/sound/about-this-page-sub.wav"></audio>
+
+    <script>
+        // Variable para verificar si el audio ya se reprodujo
+        var audioPlayed = false;
+        // reproducir el audio solo una vez
+        function playAudio() {
+            if (!audioPlayed) {
+                var audioElement = document.getElementById('aboutthispagesub');
+                audioElement.play();
+                audioPlayed = true;
+            }
+        }
+    </script>
+</body>
+</html>

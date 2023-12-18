@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    overflow: hidden; /* Evitar el desbordamiento horizontal */
+}
+
+ul {
+    list-style: none;
+}
+
+ul li:hover::before {
+    content: '';
+    left: 0;
+    bottom: -2px; /* Ajusta la posición del subrayado */
+    width: 100%;
+    height: 2px; /* Grosor del subrayado */
+    background-color: #fff; /* Color del subrayado */
+    animation: slide-in 0.3s ease-in-out;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    position: relative;
+}
+
+h1,
+p,
+ul {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.side-bar {
+    float: right;
+    width: 200px;
+    background-color: #000; /* Fondo negro */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+    border: 1px solid #fff; /* Borde blanco */
+  }
+  
+  .side-bar h2 {
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  
+  .side-bar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .side-bar li {
+    margin-bottom: 5px;
+    color: #fff; /* Color del texto blanco */
+  }

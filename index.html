@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theritex - Redirection Site</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="shortcut icon" href="media/images/icon.ico" type="image/x-icon">
+  <meta author="Andrés Abadías">
+  <meta description="Theritex - Servicio de redirección | Página de redirecció de Theritex">
+</head>
+<body>
+
+  <div class="container">
+    <h1 id="pageTitle" class="typewriter">Theritex - Servicio de redirección</h1>
+
+    <audio id="reloadpage" src="media/sound/reloadpage.wav"></audio>
+    <audio id="theritex" src="media/sound/redirecting-theritex.wav"></audio>
+    <audio id="theritex-github" src="media/sound/redirecting-theritex-github.wav"></audio>
+    <audio id="about-theritex" src="media/sound/redirecting-about-theritex.wav"></audio>
+
+    <p class="typewriter">Forjando Futuros Digitales</p>
+
+    <p class="typewriter">Enlaces:</p>
+    <ul>
+      <li><a href="index.html" onclick="playSound(event, 'reloadpage')" class="typewriter">Reload Page</a></li>
+      <li><a href="https://github.com/Theritex" onclick="playSound(event, 'theritex')" class="typewriter">Theritex Main Page</a></li><!--En desarrollo-->
+      <li><a href="https://github.com/Theritex" onclick="playSound(event, 'theritex-github')" class="typewriter">Theritex GitHub</a></li>
+    </ul>
+
+
+    <audio id="author" src="media/sound/author.wav"></audio>
+    <audio id="creativecommons" src="media/sound/creativecommons.wav"></audio>
+    <audio id="about-this-page" src="media/sound/about-this-page.wav"></audio>
+
+    <div class="side-bar">
+      <h2>This Page:</h2>
+      <ul>
+        <li><a href="https://github.com/Nisamov" onclick="playSound(event, 'author')" class="typewriter">Author</a></li>
+        <li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" onclick="playSound(event, 'creativecommons')" class="typewriter">CreativeCommons</a></li>
+        <li><a href="about.html" onclick="playSound(event, 'about-this-page')" class="typewriter">About this page</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function playSound(event, soundId) {
+      var sonido = document.getElementById(soundId);
+      sonido.play();
+      event.preventDefault();
+      sonido.addEventListener('ended', function() {
+        var url = event.target.href;
+        window.location.href = url;
+      });
+    }
+  </script>
+  <script src="scripts/script.js"></script>
+
+</body>
+</html>
